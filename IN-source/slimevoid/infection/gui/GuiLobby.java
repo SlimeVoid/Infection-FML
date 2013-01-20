@@ -153,7 +153,7 @@ public class GuiLobby extends GuiScreen {
 		drawRect(margin, height - margin * 3 - 1, playersWidth, height - margin * 3, 0xA0FFFFFF);
 		drawRect(margin, margin, margin + 1, height - margin * 3, 0xA0FFFFFF);
 		drawRect(playersWidth - 1, margin, playersWidth, height - margin * 3, 0xA0FFFFFF);
-		NetClientHandler netclienthandler = ((EntityClientPlayerMP)mc.thePlayer).sendQueue;
+		NetClientHandler netclienthandler = mc.thePlayer.sendQueue;
         @SuppressWarnings("unchecked")
 		List<GuiPlayerInfo> list = netclienthandler.playerInfoList;
         for(int i = 0; i < list.size(); i ++) {
@@ -206,9 +206,9 @@ public class GuiLobby extends GuiScreen {
         glViewport(0, 0, mc.displayWidth, mc.displayHeight);
         Tessellator tessellator = Tessellator.instance;
         tessellator.startDrawingQuads();
-        float f = width <= height ? 120F / (float)height : 120F / (float)width;
-        float u = ((float)height * f) / 256F;
-        float v = ((float)width * f) / 256F;
+        float f = width <= height ? 120F / height : 120F / width;
+        float u = (height * f) / 256F;
+        float v = (width * f) / 256F;
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR); 
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
         tessellator.setColorRGBA_F(1, 1, 1, 1);
@@ -235,7 +235,7 @@ public class GuiLobby extends GuiScreen {
 			tessellator.setColorRGBA_F(1, 1, 1, 1 / (float)(i + 1));
 			int j = width;
 			int k = height;
-			float f = (float)(i - blur / 2) / 256F;
+			float f = (i - blur / 2) / 256F;
 			tessellator.addVertexWithUV(j, k, zLevel, 0 + f, 0);
 			tessellator.addVertexWithUV(j, 0, zLevel, 1 + f, 0);
 			tessellator.addVertexWithUV(0, 0, zLevel, 1 + f, 1);
@@ -269,7 +269,7 @@ public class GuiLobby extends GuiScreen {
             float f1 = ((float)(j / i) / (float)i - .5F) / 64F;
             float f2 = 0;
             glTranslatef(f, f1, f2);
-            glRotatef(-((float)tickCounter + par3) * .1F, 0, 1, 0);
+            glRotatef(-(tickCounter + par3) * .1F, 0, 1, 0);
 
             for (int face = 0; face < 6; face++) {
                 glPushMatrix();

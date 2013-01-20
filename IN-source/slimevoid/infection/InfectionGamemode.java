@@ -167,9 +167,9 @@ public class InfectionGamemode extends Gamemode {
 		if ((entity instanceof EntityItem)) {
 			int age = ((EntityItem) entity).age;
 			if (age < 100) {
-				entity.motionY = 0.25F - 0.25F * ((float) age / 50F);
+				entity.motionY = 0.25F - 0.25F * (age / 50F);
 				entity.onGround = false;
-				entity.addVelocity(0, 0.25F - 0.25F * ((float) age / 50F), 0);
+				entity.addVelocity(0, 0.25F - 0.25F * (age / 50F), 0);
 			}
 			
 		}

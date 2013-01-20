@@ -141,10 +141,10 @@ public class EntityAIInfectedArrowAttack extends EntityAIBase
         {
             EntitySnowball entitysnowball = new EntitySnowball(worldObj, entityHost);
             double d = attackTarget.posX - entityHost.posX;
-            double d1 = (attackTarget.posY + (double)attackTarget.getEyeHeight()) - 1.1000000238418579D - entitysnowball.posY;
+            double d1 = (attackTarget.posY + attackTarget.getEyeHeight()) - 1.1000000238418579D - entitysnowball.posY;
             double d2 = attackTarget.posZ - entityHost.posZ;
             float f = MathHelper.sqrt_double(d * d + d2 * d2) * 0.2F;
-            entitysnowball.setThrowableHeading(d, d1 + (double)f, d2, 1.6F, 12F);
+            entitysnowball.setThrowableHeading(d, d1 + f, d2, 1.6F, 12F);
             worldObj.playSoundAtEntity(entityHost, "random.bow", 1.0F, 1.0F / (entityHost.getRNG().nextFloat() * 0.4F + 0.8F));
             worldObj.spawnEntityInWorld(entitysnowball);
         }

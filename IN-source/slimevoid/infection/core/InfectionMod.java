@@ -15,7 +15,6 @@ import static java.lang.Math.cos;
 import static java.lang.Math.sin;
 import static java.lang.Math.sqrt;
 import static org.lwjgl.opengl.GL11.GL_BLEND;
-import static org.lwjgl.opengl.GL11.GL_CULL_FACE;
 import static org.lwjgl.opengl.GL11.GL_FILL;
 import static org.lwjgl.opengl.GL11.GL_FRONT;
 import static org.lwjgl.opengl.GL11.GL_FRONT_AND_BACK;
@@ -312,7 +311,7 @@ public class InfectionMod {
 		        glPushMatrix();
 			        float scale = .625F;
 			        glScalef(0.5f, scale, scale);
-			        float f9 = ((float)(System.currentTimeMillis() % 16000L) / 16000F) * 4F;
+			        float f9 = ((System.currentTimeMillis() % 16000L) / 16000F) * 4F;
 			        glTranslatef(f9, 0.0F, 0.0F);
 			        glRotatef(-90F, 0.0F, 0.0F, 1.0F);
 			        glMatrixMode(GL_MODELVIEW);

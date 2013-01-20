@@ -41,12 +41,12 @@ public class BlockInfectedWater extends BlockFluid {
 		
 		if (world.rand.nextInt(100) == 0)
         {
-            double d = (float)x + world.rand.nextFloat();
-            double d2 = (double)y + maxY;
-            double d4 = (float)z + world.rand.nextFloat();
+            double d = x + world.rand.nextFloat();
+            double d2 = y + maxY;
+            double d4 = z + world.rand.nextFloat();
             //world.spawnParticle("lava", d, d2, d4, 10.0D, 50.0D, 100.0D);
             if (world.isRemote)
-            	ModLoader.getMinecraftInstance().effectRenderer.addEffect(((EntityFX)(new EntityInfectedWaterFX(world, d, d2, d4))));
+            	ModLoader.getMinecraftInstance().effectRenderer.addEffect((new EntityInfectedWaterFX(world, d, d2, d4)));
         }
 
         if (world.rand.nextInt(200) == 0)

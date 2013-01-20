@@ -94,10 +94,10 @@ public class EntityInfectedArrow extends Entity {
 		arrowCritical = false;
 		shootingEntity = par2EntityLiving;
 		doesArrowBelongToPlayer = par2EntityLiving instanceof EntityPlayer;
-		posY = (par2EntityLiving.posY + (double) par2EntityLiving
+		posY = (par2EntityLiving.posY + par2EntityLiving
 				.getEyeHeight()) - 0.10000000149011612D;
 		double d = par3EntityLiving.posX - par2EntityLiving.posX;
-		double d1 = (par3EntityLiving.posY + (double) par3EntityLiving
+		double d1 = (par3EntityLiving.posY + par3EntityLiving
 				.getEyeHeight()) - 0.69999998807907104D - posY;
 		double d2 = par3EntityLiving.posZ - par2EntityLiving.posZ;
 		double d3 = MathHelper.sqrt_double(d * d + d2 * d2);
@@ -113,7 +113,7 @@ public class EntityInfectedArrow extends Entity {
 					par2EntityLiving.posZ + d5, f, f1);
 			yOffset = 0.0F;
 			float f2 = (float) d3 * 0.2F;
-			setArrowHeading(d, d1 + (double) f2, d2, par4, par5);
+			setArrowHeading(d, d1 + f2, d2, par4, par5);
 			return;
 		}
 	}
@@ -136,7 +136,7 @@ public class EntityInfectedArrow extends Entity {
 		doesArrowBelongToPlayer = par2EntityLiving instanceof EntityPlayer;
 		setSize(0.5F, 0.5F);
 		setLocationAndAngles(par2EntityLiving.posX, par2EntityLiving.posY
-				+ (double) par2EntityLiving.getEyeHeight(),
+				+ par2EntityLiving.getEyeHeight(),
 				par2EntityLiving.posZ, par2EntityLiving.rotationYaw,
 				par2EntityLiving.rotationPitch);
 		posX -= MathHelper.cos((rotationYaw / 180F) * (float) Math.PI) * 0.16F;
@@ -167,9 +167,9 @@ public class EntityInfectedArrow extends Entity {
 		par1 /= f;
 		par3 /= f;
 		par5 /= f;
-		par1 += rand.nextGaussian() * 0.0074999998323619366D * (double) par8;
-		par3 += rand.nextGaussian() * 0.0074999998323619366D * (double) par8;
-		par5 += rand.nextGaussian() * 0.0074999998323619366D * (double) par8;
+		par1 += rand.nextGaussian() * 0.0074999998323619366D * par8;
+		par3 += rand.nextGaussian() * 0.0074999998323619366D * par8;
+		par5 += rand.nextGaussian() * 0.0074999998323619366D * par8;
 		par1 *= par7;
 		par3 *= par7;
 		par5 *= par7;
@@ -318,7 +318,7 @@ public class EntityInfectedArrow extends Entity {
 			if (movingobjectposition.entityHit != null) {
 				float f1 = MathHelper.sqrt_double(motionX * motionX + motionY
 						* motionY + motionZ * motionZ);
-				int j1 = (int) Math.ceil((double) f1 * damage);
+				int j1 = (int) Math.ceil(f1 * damage);
 
 				if (arrowCritical) {
 					j1 += rand.nextInt(j1 / 2 + 2);
@@ -345,12 +345,12 @@ public class EntityInfectedArrow extends Entity {
 								movingobjectposition.entityHit
 										.addVelocity(
 												(motionX
-														* (double) field_46027_au * 0.60000002384185791D)
-														/ (double) f7,
+														* field_46027_au * 0.60000002384185791D)
+														/ f7,
 												0.10000000000000001D,
 												(motionZ
-														* (double) field_46027_au * 0.60000002384185791D)
-														/ (double) f7);
+														* field_46027_au * 0.60000002384185791D)
+														/ f7);
 							}
 						}
 					}
@@ -382,9 +382,9 @@ public class EntityInfectedArrow extends Entity {
 				motionZ = (float) (movingobjectposition.hitVec.zCoord - posZ);
 				float f2 = MathHelper.sqrt_double(motionX * motionX + motionY
 						* motionY + motionZ * motionZ);
-				posX -= (motionX / (double) f2) * 0.05000000074505806D;
-				posY -= (motionY / (double) f2) * 0.05000000074505806D;
-				posZ -= (motionZ / (double) f2) * 0.05000000074505806D;
+				posX -= (motionX / f2) * 0.05000000074505806D;
+				posY -= (motionY / f2) * 0.05000000074505806D;
+				posZ -= (motionZ / f2) * 0.05000000074505806D;
 				worldObj.playSoundAtEntity(this, "random.bowhit", 1.0F,
 						1.2F / (rand.nextFloat() * 0.2F + 0.9F));
 				inGround = true;
@@ -395,9 +395,9 @@ public class EntityInfectedArrow extends Entity {
 
 		if (arrowCritical) {
 			for (int i1 = 0; i1 < 4; i1++) {
-				worldObj.spawnParticle("crit", posX + (motionX * (double) i1)
-						/ 4D, posY + (motionY * (double) i1) / 4D, posZ
-						+ (motionZ * (double) i1) / 4D, -motionX,
+				worldObj.spawnParticle("crit", posX + (motionX * i1)
+						/ 4D, posY + (motionY * i1) / 4D, posZ
+						+ (motionZ * i1) / 4D, -motionX,
 						-motionY + 0.20000000000000001D, -motionZ);
 			}
 		}
@@ -431,9 +431,9 @@ public class EntityInfectedArrow extends Entity {
 		if (isInWater()) {
 			for (int k1 = 0; k1 < 4; k1++) {
 				float f8 = 0.25F;
-				worldObj.spawnParticle("bubble", posX - motionX * (double) f8,
-						posY - motionY * (double) f8, posZ - motionZ
-								* (double) f8, motionX, motionY, motionZ);
+				worldObj.spawnParticle("bubble", posX - motionX * f8,
+						posY - motionY * f8, posZ - motionZ
+								* f8, motionX, motionY, motionZ);
 			}
 
 			f4 = 0.8F;

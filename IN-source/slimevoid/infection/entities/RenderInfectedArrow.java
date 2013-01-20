@@ -26,15 +26,15 @@ public class RenderInfectedArrow extends Render
         int i = 0;
         float f = 0.0F;
         float f1 = 0.5F;
-        float f2 = (float)(0 + i * 10) / 32F;
-        float f3 = (float)(5 + i * 10) / 32F;
+        float f2 = (0 + i * 10) / 32F;
+        float f3 = (5 + i * 10) / 32F;
         float f4 = 0.0F;
         float f5 = 0.15625F;
-        float f6 = (float)(5 + i * 10) / 32F;
-        float f7 = (float)(10 + i * 10) / 32F;
+        float f6 = (5 + i * 10) / 32F;
+        float f7 = (10 + i * 10) / 32F;
         float f8 = 0.05625F;
         GL11.glEnable(GL12.GL_RESCALE_NORMAL);
-        float f9 = (float)par1EntityArrow.arrowShake - par9;
+        float f9 = par1EntityArrow.arrowShake - par9;
 
         if (f9 > 0.0F)
         {
