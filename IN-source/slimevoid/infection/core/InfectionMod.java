@@ -166,7 +166,7 @@ public class InfectionMod {
 		SPAWN = new BlockSpawn(1105, 20).setHardness(-1);
 		GROUND_DIAMOND = new BlockGroundDiamond(1106).setHardness(-1);
 		GameRegistry.registerBlock(INFECTED, "Infected Block");
-		// TODO : Huh? blocksNotifyOnAddAndRm[INFECTED.blockID] = true;
+		// TODO :: Huh? blocksNotifyOnAddAndRm[INFECTED.blockID] = true;
 		GameRegistry.registerBlock(INFECTED_SKY, "Infected Sky");
 		GameRegistry.registerBlock(INFECTED_WOOD, "Infected Wood");
 		GameRegistry.registerBlock(INFECTED_WATER, "Infected Water");
@@ -181,14 +181,14 @@ public class InfectionMod {
 		LanguageRegistry.addName(SPAWN, "Infected Spawner");
 		LanguageRegistry.addName(GROUND_DIAMOND, "Diamond Ground");
 		
-		// TODO : Tick Handler ModLoader.setInGameHook(this, true, true);
+		// TODO :: Tick Handler ModLoader.setInGameHook(this, true, true);
 		
 		EntityRegistry.registerGlobalEntityID(EntityInfectedSpider.class, "Infected Spider", EntityRegistry.findGlobalUniqueEntityId());
 		EntityRegistry.registerGlobalEntityID(EntityInfectedZombie.class, "Infected Zombie", EntityRegistry.findGlobalUniqueEntityId());
 		EntityRegistry.registerGlobalEntityID(EntityInfectedSkeleton.class, "Infected Skeleton", EntityRegistry.findGlobalUniqueEntityId());
 		EntityRegistry.registerGlobalEntityID(EntityInfectedWorm.class, "Infected Worm", EntityRegistry.findGlobalUniqueEntityId());
 		EntityRegistry.registerGlobalEntityID(EntityInfectedArrow.class, "Infected Arrow", EntityRegistry.findGlobalUniqueEntityId());
-		// TODO : PacketHandlers ModLoaderMp.registerNetClientHandlerEntity(EntityInfectedArrow.class, 110);
+		// TODO :: PacketHandlers ModLoaderMp.registerNetClientHandlerEntity(EntityInfectedArrow.class, 110);
 		
 		GameRegistry.registerTileEntity(TileEntityDiamond.class, "Diamond");
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityDiamond.class, new RenderDiamond());
@@ -557,7 +557,7 @@ public class InfectionMod {
 		//super.renderInvBlock(renderblocks, block, i, j);
 	}
 
-	// TODO : Moar Packet Shizzle
+	// TODO :: Moar Packet Shizzle
 	public void handlePacket(Packet250CustomPayload packet) {
 		/*switch(packet.dataInt[0]) {
 			case 0: // INFECTION POS

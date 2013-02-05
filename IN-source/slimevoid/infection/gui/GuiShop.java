@@ -103,7 +103,7 @@ public class GuiShop extends GuiScreen {
 		super.actionPerformed(guibutton);
 		if(guibutton.enabled) {
 			switch(guibutton.id) {
-			case 0: // TODO : BUY packet
+			case 0: // TODO :: BUY packet
 /*				Packet230ModLoader packet = new Packet230ModLoader();
 				packet.dataInt = new int[]{1, selectedItem.ordinal()};
 				ModLoaderMp.sendPacket(mod_Infection.instance, packet);*/

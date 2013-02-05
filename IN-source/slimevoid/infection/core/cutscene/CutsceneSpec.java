@@ -122,7 +122,7 @@ public class CutsceneSpec extends Cutscene {
 					}
 				}
 				if(followedPlayer != null) {
-					// TODO : Moar and Moar and Moar Packet Shizzle
+					// TODO :: Moar and Moar and Moar Packet Shizzle
 /*					Packet230ModLoader packet = new Packet230ModLoader();
 					packet.dataInt = new int[]{5};
 					packet.dataString = new String[]{followedPlayer.username};

@@ -27,7 +27,7 @@ public class BlockInfected extends Block {
 	
 	@Override
 	public void onBlockAdded(World world, int x, int y, int z) {
-		// TODO : InfectionGamemode.infection.activateInfection(x, y, z);
+		// TODO :: InfectionGamemode.infection.activateInfection(x, y, z);
 	}
 	
 	@Override
@@ -87,7 +87,7 @@ public class BlockInfected extends Block {
 	
 	@Override
 	public void onNeighborBlockChange(World world, int i, int j, int k, int l) {
-		// TODO : InfectionGamemode.infection.activateInfection(i, j, k);
+		// TODO :: InfectionGamemode.infection.activateInfection(i, j, k);
 	}
 	
 	private long lastSnd = 0;

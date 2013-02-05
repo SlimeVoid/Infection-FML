@@ -76,7 +76,7 @@ public class GuiCutscene extends GuiScreen {
         glDisable(GL_ALPHA_TEST);
         glPushMatrix();
         glTranslatef(0, height - 48, 0);
-        // TODO : WTF? mc.ingameGUI.func_50010_a(fontRenderer);
+        // TODO :: WTF? mc.ingameGUI.func_50010_a(fontRenderer);
         glPopMatrix();
 		
 		super.drawScreen(mouseX, mouseY, frameDelta);

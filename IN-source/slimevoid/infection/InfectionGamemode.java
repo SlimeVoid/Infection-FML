@@ -52,7 +52,7 @@ public class InfectionGamemode extends Gamemode {
 	@Override
 	public void onEnable(World world, MinecraftServer server) {
 		super.onEnable(world, server);
-		// TODO : Needed? mod_Infection.initModLoaderRegistrations();
+		// TODO :: Needed? mod_Infection.initModLoaderRegistrations();
 		infection = new Infection();
 	}
 	

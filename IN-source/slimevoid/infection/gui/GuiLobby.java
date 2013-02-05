@@ -75,7 +75,7 @@ public class GuiLobby extends GuiScreen {
 	protected void actionPerformed(GuiButton guibutton) {
 		switch(guibutton.id) {
 		case 0:
-			// TODO : Gui Packet Shizzle
+			// TODO :: Gui Packet Shizzle
 			/**
 			Packet230ModLoader packet = new Packet230ModLoader();
 			packet.dataInt = new int[] {2, mod_Infection.instance.isPlayerReady(mc.thePlayer.username) ? 0 : 1};

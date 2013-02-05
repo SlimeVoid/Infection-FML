@@ -132,7 +132,7 @@ public class InfectionGameSession extends GameSession {
 					}
 				}
 			}
-			// TODO : WTF?
+			// TODO :: WTF?
 /*			for(EntityPlayerMP player : mod_SlimeVoid.getPlayersList()) {
 				if(!isPlayerReady(player) && player != null) {
 					if(player.theItemInWorldManager != null && player.theItemInWorldManager.getGameType() != 1) {
@@ -186,7 +186,7 @@ public class InfectionGameSession extends GameSession {
 	}
 	
 	public void updatePlayersReadyness(EntityPlayerMP client) {
-		// TODO : Moar and Moar Packet shizzle
+		// TODO :: Moar and Moar Packet shizzle
 /*		Packet230ModLoader packet = new Packet230ModLoader();
 		List<EntityPlayerMP> players = mod_SlimeVoid.getPlayersList();
 		packet.dataInt = new int[2 + players.size()];
