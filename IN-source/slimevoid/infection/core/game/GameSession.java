@@ -6,7 +6,6 @@ import java.util.List;
 import cpw.mods.fml.server.FMLServerHandler;
 
 import net.minecraft.server.MinecraftServer;
-import net.minecraft.src.ModLoader;
 
 public class GameSession {
 	

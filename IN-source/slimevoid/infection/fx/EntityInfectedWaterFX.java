@@ -25,7 +25,7 @@ public class EntityInfectedWaterFX extends EntityFX
 
     public int getBrightnessForRender(float par1)
     {
-        float f = ((float)particleAge + par1) / (float)particleMaxAge;
+        float f = (particleAge + par1) / particleMaxAge;
 
         if (f < 0.0F)
         {
@@ -53,7 +53,7 @@ public class EntityInfectedWaterFX extends EntityFX
 
     public void renderParticle(Tessellator par1Tessellator, float par2, float par3, float par4, float par5, float par6, float par7)
     {
-        float f = ((float)particleAge + par2) / (float)particleMaxAge;
+        float f = (particleAge + par2) / particleMaxAge;
         particleScale = lavaParticleScale * (1.0F - f * f);
         super.renderParticle(par1Tessellator, par2, par3, par4, par5, par6, par7);
     }

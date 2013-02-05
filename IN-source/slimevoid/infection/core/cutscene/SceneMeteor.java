@@ -202,7 +202,7 @@ public class SceneMeteor extends Scene3D {
 	    glPushMatrix();
 	    float scale = .1F;
 	    glScalef(scale, scale, scale);
-	    float f9 = ((float)(System.currentTimeMillis() % 3000L) / 3000F) * 8F;
+	    float f9 = ((System.currentTimeMillis() % 3000L) / 3000F) * 8F;
 	    glTranslatef(f9, 0.0F, 0.0F);
 	    glRotatef(-50F, 0.0F, 0.0F, 1.0F);
 	    glMatrixMode(GL_MODELVIEW);
@@ -211,7 +211,7 @@ public class SceneMeteor extends Scene3D {
 	    glPopMatrix();
 	    glPushMatrix();
 	    glScalef(scale, scale, scale);
-	    f9 = ((float)(System.currentTimeMillis() % 4873L) / 4873F) * 8F;
+	    f9 = ((System.currentTimeMillis() % 4873L) / 4873F) * 8F;
 	    glTranslatef(-f9, 0.0F, 0.0F);
 	    glRotatef(10F, 0.0F, 0.0F, 1.0F);
 	    glMatrixMode(GL_MODELVIEW);
@@ -347,12 +347,12 @@ public class SceneMeteor extends Scene3D {
 			newY = pos.y;
 			newZ = pos.z;
 			if (oldX != newX && oldY != newY && oldZ != newZ && oldX != 0 && oldY != 0 && oldZ != 0){
-				float factor = (float)((float)b / (float)maxPos);
+				float factor = ((float)b / (float)maxPos);
 				if (factor < 0.1f) {
 					factor = 0.1f;
 				}
 				glColor4f(0.3f - .3F * factor, 0.1f - .1F * factor, 0.15f - .15F * factor, 0.8f - 0.8f * factor);
-				glLineWidth(maxSize - maxSize * (float)((float)b / (float)maxPos) + 1);
+				glLineWidth(maxSize - maxSize * ((float)b / (float)maxPos) + 1);
 				glBegin(GL_LINES);
 					glVertex3d(newX, newY, newZ);
 					glVertex3d(oldX, oldY, oldZ);

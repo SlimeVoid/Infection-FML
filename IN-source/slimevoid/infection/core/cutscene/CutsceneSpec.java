@@ -8,16 +8,10 @@ import java.util.List;
 
 import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraftforge.common.DimensionManager;
-
 import org.lwjgl.input.Keyboard;
 import org.lwjgl.input.Mouse;
 import org.lwjgl.opengl.Display;
 
-import slimevoid.infection.core.InfectionMod;
-
-
-import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.server.FMLServerHandler;
 
 public class CutsceneSpec extends Cutscene {

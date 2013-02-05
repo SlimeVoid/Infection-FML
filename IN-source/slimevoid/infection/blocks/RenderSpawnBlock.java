@@ -251,7 +251,7 @@ public class RenderSpawnBlock extends TileEntitySpecialRenderer {
         glPushMatrix();
 	        float scale = .1F;
 	        glScalef(scale, scale, scale);
-	        float f9 = ((float)(System.currentTimeMillis() % 3000L) / 3000F) * 8F;
+	        float f9 = ((System.currentTimeMillis() % 3000L) / 3000F) * 8F;
 	        glTranslatef(f9, 0.0F, 0.0F);
 	        glRotatef(-50F, 0.0F, 0.0F, 1.0F);
 	        glMatrixMode(GL_MODELVIEW);
@@ -261,7 +261,7 @@ public class RenderSpawnBlock extends TileEntitySpecialRenderer {
         
         glPushMatrix();
 	        glScalef(scale, scale, scale);
-	        f9 = ((float)(System.currentTimeMillis() % 4873L) / 4873F) * 8F;
+	        f9 = ((System.currentTimeMillis() % 4873L) / 4873F) * 8F;
 	        glTranslatef(-f9, 0.0F, 0.0F);
 	        glRotatef(10F, 0.0F, 0.0F, 1.0F);
 	        glMatrixMode(GL_MODELVIEW);

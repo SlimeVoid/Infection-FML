@@ -32,7 +32,7 @@ public class EntityInfectedArrowFX extends EntityFX {
     }
 
     public void renderParticle(Tessellator par1Tessellator, float par2, float par3, float par4, float par5, float par6, float par7) {
-        float f = ((float)particleAge + par2) / (float)particleMaxAge;
+        float f = (particleAge + par2) / particleMaxAge;
         f = 1.0F - f;
         f *= f * 2 + .2F;
         particleScale = portalParticleScale * f;
@@ -75,9 +75,9 @@ public class EntityInfectedArrowFX extends EntityFX {
         prevPosZ = posZ;
         float f = (float)particleAge / (float)particleMaxAge;
         f = (float) (1 - (pow(1 - f, 2)));
-        posX = sX + motionX * (double)f;
-        posY = sY + motionY * (double)f;
-        posZ = sZ + motionZ * (double)f;
+        posX = sX + motionX * f;
+        posY = sY + motionY * f;
+        posZ = sZ + motionZ * f;
 
         if (particleAge++ >= particleMaxAge)
         {

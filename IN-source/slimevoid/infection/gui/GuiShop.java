@@ -18,7 +18,6 @@ import net.minecraft.client.renderer.entity.RenderItem;
 
 import org.lwjgl.opengl.GL12;
 
-import slimevoid.infection.core.InfectionMod;
 import slimevoid.infection.shop.ShopItem;
 import slimevoid.infection.shop.ShopManager;
 import slimevoid.infection.shop.ShopItem.ItemType;

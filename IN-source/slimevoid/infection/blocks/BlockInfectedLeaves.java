@@ -51,11 +51,11 @@ public class BlockInfectedLeaves extends Block {
 		if(Block.blocksList[world.getBlockId(x, y + 1, z)] == null || !Block.blocksList[world.getBlockId(x, y + 1, z)].isOpaqueCube()) {
 			if(world.rand.nextInt(20) == 0) { 
 				world.spawnParticle("reddust", x + world.rand.nextDouble(), y + world.rand.nextDouble(), z + world.rand.nextDouble(), 0.9D, 0.9D, 0.9D);
-				double d = (float)x + world.rand.nextFloat();
-	            double d2 = (double)y + maxY;
-	            double d4 = (float)z + world.rand.nextFloat();
+				double d = x + world.rand.nextFloat();
+	            double d2 = y + maxY;
+	            double d4 = z + world.rand.nextFloat();
 	            if (world.isRemote)
-	            	ModLoader.getMinecraftInstance().effectRenderer.addEffect(((EntityFX)(new EntityInfectedLeavesFX(world, d, d2, d4))));
+	            	ModLoader.getMinecraftInstance().effectRenderer.addEffect((new EntityInfectedLeavesFX(world, d, d2, d4)));
 			}
 		}
 	}
